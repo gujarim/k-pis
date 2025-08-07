@@ -1253,7 +1253,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="img">
-                    <img src="./images/main2024/main-slide01.jpg" alt="">
+                    <img src="./images/main2024/main-slide02.jpg" alt="">
                   </div>
                   <div class="text">
                     <div class="search" style="border-color: #7b9bb5;">
@@ -1283,7 +1283,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="img">
-                    <img src="./images/main2024/main-slide01.jpg" alt="">
+                    <img src="./images/main2024/main-slide03.jpg" alt="">
                   </div>
                   <div class="text">
                     <div class="search">
@@ -1309,7 +1309,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="img">
-                    <img src="./images/main2024/main-slide01.jpg" alt="">
+                    <img src="./images/main2024/main-slide04.jpg" alt="">
                   </div>
                   <div class="text">
                     <div class="search" style="border-color: #ab9e91;">
@@ -1338,10 +1338,10 @@
                 <div class="swiper-pagination">
                   
                 </div>
-                <!-- <div class="play">
+                <div class="play">
                   <img src="./images/main2024/slide-play.png" alt="" class="btn-play">
                   <img src="./images/main2024/slide-stop.png" alt="" class="btn-stop">
-                </div> -->
+                </div>
               </div>
             </div>
 
@@ -1745,7 +1745,7 @@ var mainSlide = new Swiper(".main-slide", {
     },
 });
 
-/*
+
 const play = document.querySelector('.play ')
 const slideStop = document.querySelector('.btn-stop')
 const slidePlay = document.querySelector('.btn-play')
@@ -1756,20 +1756,20 @@ slideStop.addEventListener('click',() => {
     mainSlide.autoplay.stop();
 })
 slidePlay.addEventListener('click',() => {
-    ainSlide.autoplay.start();
+    mainSlide.autoplay.start();
 })
-    */
+
 
 var swiper = new Swiper(".fsList", {
     slidesPerView: 'auto',
-     initialSlide: 0,
+    initialSlide: 0,
     // centeredSlides: true,
-     loopedSlides: 1,
-     loop: true,
-     autoplay: {
-         delay: 2000, // 2초
-         disableOnInteraction: false,
-     },
+    loopedSlides: 1,
+    loop: true,
+    autoplay: {
+        delay: 2000, // 2초
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -1785,7 +1785,6 @@ var swiper = new Swiper(".fsList", {
 //유관사이트 호버시 슬라이드 멈춤/재생
 document.querySelectorAll('.fsList').forEach(function(element) {
     element.addEventListener('mouseenter', function() {
-        console.log('ok');
         swiper.autoplay.stop();
     });
 

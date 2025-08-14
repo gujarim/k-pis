@@ -32,7 +32,7 @@
 }
 .mainsection.section01 .inner .left .topbanner {
   display: block;
-  margin-bottom: 20px;
+  margin-top: 38px;
 }
 .mainsection.section01 .inner .left .topbanner img{
   width:100%;
@@ -636,6 +636,9 @@
     padding-top: 10px;
   }
 
+  .mainsection.section01 .inner .left .topbanner{
+    margin-top: 20px;
+  }
   .mainsection.section01 .inner .left .topbanner .bnr-pc{
     display: none;
   }

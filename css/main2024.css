@@ -32,10 +32,11 @@
 }
 .mainsection.section01 .inner .left .topbanner {
   display: block;
-  margin-top: 38px;
+  margin-bottom: 38px;
 }
 .mainsection.section01 .inner .left .topbanner img{
   width:100%;
+  border-radius: 5px;
 }
 .mainsection.section01 .inner .left .topbanner .bnr-mo{
   display: none;
@@ -306,7 +307,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 24px;
+  margin-top: 30px;
 }
 .mainsection.section01 .inner .right .links > div p {
   font-size: 16px;
@@ -314,19 +315,35 @@
   font-weight: 500;
 }
 .mainsection.section01 .inner .right .links > div a {
-  margin-top: 10px;
+  /* margin-top: 10px;
   padding: 5px 16px;
   background-color: #fff;
   border: 1px solid #7e7e7e;
   font-size: 14px;
   font-weight: 300;
-  transition: all 0.2s;
+  transition: all 0.2s; */
+  font-size: 16px;
+  margin-top: 16px;
+  font-weight: 500;
 }
-.mainsection.section01 .inner .right .links > div a:hover {
+
+.mainsection.section01 .inner .right .links > div a::after{
+  content: '';
+  width: 8px;
+  height: 15px;
+  display: inline-block;
+  margin-left: 4px;
+  background: url(../images/main2024/ico_moreView.png) no-repeat center center;
+  background-size: 100%;
+  vertical-align: middle;
+  margin-top: -4px;
+
+}
+/* .mainsection.section01 .inner .right .links > div a:hover {
   background-color: #7da9d7;
   border: 1px solid #4c88c9;
   color: #fff;
-}
+} */
 .mainsection.section02 .inner {
   display: flex;
   display: flex;
@@ -636,7 +653,7 @@
   }
 
   .mainsection.section01 .inner .left .topbanner{
-    margin-top: 20px;
+    margin: 20px 0;
   }
   .mainsection.section01 .inner .left .topbanner .bnr-pc{
     display: none;

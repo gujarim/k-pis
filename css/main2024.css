@@ -27,12 +27,12 @@
 }
 .mainsection.section01 .inner .left {
   width: 100%;
-  padding: 40px 40px 50px 0;
+  padding: 46px 40px 97px 0;
   max-width: 1164px;
 }
 .mainsection.section01 .inner .left .topbanner {
   display: block;
-  margin-bottom: 38px;
+  margin-bottom: 50px;
 }
 .mainsection.section01 .inner .left .topbanner img{
   width:100%;
@@ -307,7 +307,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 36px;
 }
 .mainsection.section01 .inner .right .links > div p {
   font-size: 16px;

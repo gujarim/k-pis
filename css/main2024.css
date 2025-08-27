@@ -174,6 +174,7 @@
   position: relative;
   cursor: pointer;
 }
+.mainsection.section01 .inner .left .section01-02 .main-slide .pagination-wrap .play:focus-visible{outline-offset: 3px;outline-color: red;}
 .mainsection.section01 .inner .left .section01-02 .main-slide .pagination-wrap .play.one-click img.btn-stop {
   display: none;
 }
@@ -388,6 +389,9 @@
   transform: translateY(-3px);
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
+.mainsection.section02 .map .text a:focus-visible{
+  outline-offset: 3px;
+}
 .mainsection.section02 .complaint {
   flex: 1;
 }
@@ -410,6 +414,9 @@
 }
 .mainsection.section02 .complaint .list li {
   flex: 1;
+}
+.mainsection.section02 .complaint .list li a{
+  display: block;
 }
 .mainsection.section02 .complaint .list li:hover .img {
   background-color: #eaf6fd;
@@ -663,3 +670,6 @@
     height: auto;
   }
 }
+
+/* 스크린리더기 읽음 */
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }

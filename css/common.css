@@ -1459,6 +1459,7 @@ pre{
     background-image: url(../images/btn/btn_top_main.png);
     box-shadow: 0 27px 49px rgba(27, 29, 38, 0.2);
 }
+#footer.mainFooter .btnTop a:focus-visible{outline-offset: 5px;outline-color: blue;}
 
 #footer.mainFooter address {
     color: rgba(255, 255, 255, 0.7);

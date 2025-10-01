@@ -1523,6 +1523,107 @@
             <p class="waMark"><a href="/addCntnView.do" title="웹접근성정책 바로가기1">웹접근성정책</a></p>
         </div> <!-- //inner -->
     </footer>
+
+
+
+
+
+
+<!-- 251001 팝업 -->
+<div id="newPopup" class="popup-wrap-new">
+    <div class="popup-box">
+        <strong class="pop-head">2차 본인인증 절차 도입 및 연락처 현행화 안내</strong>
+
+        <div class="pop-cont">
+            <p>
+                안녕하세요 국유재산포털 관리자입니다. <br>
+                <strong>2025년 11월</strong>부터 아래 기능 이용 시 <strong>2차 본인인증(카카오톡)</strong> 절차가 추가됩니다. <br>
+
+                <em>
+                    적용 대상: <strong>네이버 로그인, 카카오 로그인, I-PIN 인증, 아이디 찾기, 비밀번호 찾기 
+                    원활한 이용을 위해 회원정보에 등록된 연락처를 반드시 현행화해 주시기 바랍니다.</strong>
+                </em>
+                자세한 내용은 공지사항 게시판을 통해 확인이 가능합니다. <br>
+                감사합니다. <br>
+                *문의사항은 고객상담센터(1811-8822)로 연락해 주시기 바랍니다.
+            </p>
+            <a href="#">회원정보수정 바로가기</a>
+        </div>
+
+        <div class="pop-btnWrap">
+            <label for="todayClose"><input type="checkbox" id="todayClose">오늘하루 열지 않음</label>
+            <label for="neverClose"><input type="checkbox" id="neverClose">다음부터 이 창을 열지 않음</label>
+        </div>
+
+        <button type="button" class="popup-btn-close" onclick="PopupForNewPopup.close()">닫기</button>
+    </div>
+</div>
+
+<script>
+    //팝업 테스트 초기화
+    // localStorage.removeItem('popupClosedToday');
+    // localStorage.removeItem('popupNeverShow');
+    const PopupForNewPopup = (() => {
+        const popupId = 'newPopup';
+        const todayKey = 'popupClosedToday';
+        const neverKey = 'popupNeverShow';
+
+        function getTodayStr() {
+            return new Date().toISOString().split('T')[0];
+        }
+
+        function show() {
+            const popup = document.getElementById(popupId);
+            if (popup) popup.style.display = 'flex';
+            document.querySelector('body').classList.add('popupOpen');
+        }
+
+        function hide() {
+            const popup = document.getElementById(popupId);
+            if (popup) popup.style.display = 'none';
+            document.querySelector('body').classList.remove('popupOpen');
+        }
+
+        function shouldShow() {
+            const today = getTodayStr();
+            return !(
+                localStorage.getItem(neverKey) === 'true' ||
+                localStorage.getItem(todayKey) === today
+            );
+        }
+
+        function close() {
+            const todayChecked = document.getElementById('todayClose')?.checked;
+            const neverChecked = document.getElementById('neverClose')?.checked;
+
+            if (todayChecked) {
+                localStorage.setItem(todayKey, getTodayStr());
+            }
+
+            if (neverChecked) {
+                localStorage.setItem(neverKey, 'true');
+            }
+
+            hide();
+        }
+
+        // 초기화: DOM이 준비되면 실행
+        document.addEventListener('DOMContentLoaded', () => {
+            if (shouldShow()) show();
+        });
+
+        return { close }; // 전역에서 사용할 함수만 노출
+    })();
+
+</script>
+<!-- //251001 팝업 -->
+
+
+
+
+
+
+
 </div>
 </body>
 </html>
